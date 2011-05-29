@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
-"http://www.sonatype.com/tmp/docbook/xml/4.5/docbookx.dtd">
+"http://www.discursive.com/docbook/xml/4.5/docbookx.dtd">
 <chapter id="config">
   <title>Configuring Nexus</title>
 
@@ -704,6 +704,20 @@
                 in a remote repository. Nexus will periodically retest the
                 remote repository and unblock the repository once it becomes
                 available.</para>
+              </listitem>
+            </varlistentry>
+
+            <varlistentry>
+              <term>File content validation (Not shown in figure)</term>
+
+              <listitem>
+                <para>If set to true, Nexus will perform a lightweight check
+                on the content of downloaded files. This will prevent
+                invalid content to be stored and proxied by Nexus, which
+                otherwise can happen in cases where the remote repository
+                (or some proxy between Nexus and the remote repository)
+                for example returns an html page instead of the requested
+                file.</para>
               </listitem>
             </varlistentry>
 
